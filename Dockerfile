@@ -1,9 +1,6 @@
 FROM centos:7
 LABEL MAINTAINER="wz2cool, wz2cool@live.cn"
 
-ENV JAVA_VERSION 8u31
-ENV BUILD_VERSION b13
-
 # Upgrading system
 RUN yum -y upgrade
 
@@ -16,7 +13,7 @@ RUN bash -c 'aria2c -v'
 
 # Downloading Java
 RUN yum -y install wget
-RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VERSION-$BUILD_VERSION/jdk-$JAVA_VERSION-linux-x64.rpm" -O /tmp/jdk-8-linux-x64.rpm
+RUN wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm" -O /tmp/jdk-8-linux-x64.rpm
 
 RUN yum -y install /tmp/jdk-8-linux-x64.rpm
 

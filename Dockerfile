@@ -15,3 +15,5 @@ RUN alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 20
 RUN alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
 
 ENV JAVA_HOME /usr/java/latest
+
+RUN rm -rf /tmp/jdk-8-linux-x64.rpm

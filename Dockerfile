@@ -4,9 +4,6 @@ LABEL MAINTAINER="wz2cool, wz2cool@live.cn"
 ENV JAVA_VERSION 8u31
 ENV BUILD_VERSION b13
 
-# Upgrading system
-RUN yum -y upgrade
-
 # install aria2c
 RUN yum -y install epel-release
 RUN yum -y install aria2 

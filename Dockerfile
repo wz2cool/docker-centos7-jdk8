@@ -11,6 +11,7 @@ RUN yum -y upgrade
 RUN yum -y install epel-release
 RUN yum -y install aria2 
 
+RUN bash -c 'Test install aria2'
 RUN bash -c 'aria2c -v'
 
 # Downloading Java
